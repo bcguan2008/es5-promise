@@ -3,11 +3,13 @@ var STATUS_PENDING = 0,
     STATUS_REJECTED = 2;
 
 function Promise (executor){
-
     var self = this ;
     this.status = STATUS_PENDING;
     this.data = undefined;
 
+    /**
+     * Array for async call 
+     */
     this.onResolvedCallback = [];
     this.onRejectedCallback = [];
     
@@ -42,9 +44,8 @@ function Promise (executor){
 
 Promise.prototype.then = function(onResolved, onRejected){
     var self = this, newPromise;
-    onResolved = (typeof onResolved === 'function' ? onResolved:function(value){});
-    onRejected = (typeof onRejected === 'function' ? onRejected:function(reson){});
-
+    onResolved = ((onResolved && typeof onResolved === 'function') ? onResolved:function(value){});
+    onRejected = ((onRejected && typeof onRejected === 'function') ? onRejected:function(reson){});
     if(self.status === STATUS_RESOLVED){
         return newPromise = new Promise(function(resolve,reject){
             try{
