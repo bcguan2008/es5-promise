@@ -1,0 +1,29 @@
+{
+  "name": "es5-promise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test",
+    "cover": "istanbul cover _mocha && istanbul-coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcguan2008/es5-promise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcguan2008/es5-promise/issues"
+  },
+  "homepage": "https://github.com/bcguan2008/es5-promise#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "istanbul": "^0.3.8",
+    "istanbul-coveralls": "^1.0.2"
+  }
+}
