@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "mocha test",
-    "cover": "istanbul cover _mocha && istanbul-coveralls"
+    "cover": "istanbul cover _mocha && istanbul-coveralls",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -22,8 +24,10 @@
   "homepage": "https://github.com/bcguan2008/es5-promise#readme",
   "dependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.5.3",
-    "istanbul": "^0.3.8",
-    "istanbul-coveralls": "^1.0.2"
-  }
+    "mocha": "^3.0.0",
+    "istanbul": "^0.4.5",
+    "istanbul-coveralls": "^1.0.2",
+    "snyk": "^1.104.2"
+  },
+  "snyk": true
 }
