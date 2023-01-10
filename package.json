@@ -22,7 +22,7 @@
   "homepage": "https://github.com/bcguan2008/es5-promise#readme",
   "dependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.5.3",
+    "mocha": "^4.0.0",
     "istanbul": "^0.3.8",
     "istanbul-coveralls": "^1.0.2"
   }
